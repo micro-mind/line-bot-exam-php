@@ -38,11 +38,6 @@
         $arrayPostData['messages'][0]['text'] = "126/57-58 ซอย พหลโยธิน 32 ถนนพหลโยธิน แขวงเสนานิคม เขต จตุจักร กรุงเทพฯ 10900 
 \nPhone number : 02-941-6584-7 , 02-941-6984-5 \nFax : 02-561-1716 \n
 Email : nattarin@packallplastic.co.th";
-        $image_url = "https://i.pinimg.com/originals/cc/22/d1/cc22d10d9096e70fe3dbe3be2630182b.jpg";
-     
-        $arrayPostData['messages'][1]['type'] = "image";
-        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
-        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
         replyMsg($arrayHeader,$arrayPostData);
     }
 
