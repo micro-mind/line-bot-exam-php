@@ -17,9 +17,8 @@
         $arrayPostData['messages'][0]['text'] = "สวัสดีค่ะ คุณสามารถใช้คำสั่งด้านล่างเพื่อเริ่มต้นใช้งานได้เลยค่ะ\n
         เกี่ยวกับ\n
         ติดต่อ\n
-        ที่อยู่\n
-        สินค้า\n
-        ";
+        แผนที่\n
+        สินค้า\n";
         replyMsg($arrayHeader,$arrayPostData);
     }
 
@@ -33,7 +32,7 @@
     else if($message == "ติดต่อ"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "126/57-58 ซอย พหลโยธิน 32 ถนนพหลโยธิน แขวงเสนานิคม เขต จตุจักร กรุงเทพฯ 10900 
+        $arrayPostData['messages'][0]['text'] = "ที่อยู่ : 126/57-58 ซอย พหลโยธิน 32 ถนนพหลโยธิน แขวงเสนานิคม เขต จตุจักร กรุงเทพฯ 10900 
 \nPhone number : 02-941-6584-7 , 02-941-6984-5 \nFax : 02-561-1716 \nEmail : nattarin@packallplastic.co.th";
         replyMsg($arrayHeader,$arrayPostData);
     }
@@ -48,7 +47,7 @@
    else if($message == "สินค้า"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "สินค้า และบริการ\nPack All Plastic ONE STOP SERVICE เป็นผู้นำเข้า จัดจำหน่าย พร้อมให้คำปรึกษาเกี่ยวกับเครื่องจักร รวมถึงซ่อมบำรุงเครื่องจักร\n
+        $arrayPostData['messages'][0]['text'] = "สินค้า และบริการ\nPack All Plastic ONE STOP SERVICE เป็นผู้นำเข้า จัดจำหน่าย พร้อมให้คำปรึกษาเกี่ยวกับเครื่องจักร รวมถึงซ่อมบำรุงเครื่องจักร ดังนี้\n
         Feed Mixing and Dosing\n
         Injection\n
         Extrusion\n
@@ -61,12 +60,12 @@
         Granulator\n
         Robotic Arm\n
         Pipe Testing\n
-        Aluminium-uPVC Profile Procession\n เราพร้อมให้คำปรึกษา เพื่อ Solutions ที่ดีที่สุด";
+        Aluminium-uPVC Profile Procession\n\nเราพร้อมให้คำปรึกษา เพื่อ Solutions ที่ดีที่สุด";
         replyMsg($arrayHeader,$arrayPostData);
     }
 
     #ตัวอย่าง Message Type "Location"
-    else if($message == "ที่อยู่"){
+    else if($message == "แผนที่"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "location";
         $arrayPostData['messages'][0]['title'] = "Pack All Plastic Co.,Ltd.";
