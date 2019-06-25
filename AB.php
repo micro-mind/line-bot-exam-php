@@ -20,7 +20,7 @@
         แผนที่\n
         สินค้า\n
         เว็บไซต์\n
-        ตัวอย่าง\n";
+        พาร์ทเนอร์\n";
         replyMsg($arrayHeader,$arrayPostData);
     }
 
@@ -85,14 +85,7 @@
         $arrayPostData['messages'][0]['text'] = "";
         replyMsg($arrayHeader,$arrayPostData);
     }   */ 
-    #ตัวอย่าง Message Type "Sticker"
-    else if($message == "ฝันดี"){
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "sticker";
-        $arrayPostData['messages'][0]['packageId'] = "2";
-        $arrayPostData['messages'][0]['stickerId'] = "46";
-        replyMsg($arrayHeader,$arrayPostData);
-    }
+   
     #ตัวอย่าง Message Type "Image"
     else if($message == "พาร์ทเนอร์"){
         $image_url = "https://uppic.cc/d/K7bw";
@@ -111,7 +104,8 @@
         ติดต่อ\n
         แผนที่\n
         สินค้า\n
-        เว็บไซต์\n";
+        เว็บไซต์\n
+        พาร์ทเนอร์\n";
         replyMsg($arrayHeader,$arrayPostData);
     }
 function replyMsg($arrayHeader,$arrayPostData){
