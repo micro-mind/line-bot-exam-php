@@ -14,7 +14,9 @@
     if($message == "สวัสดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
+        $arrayPostData['messages'][0]['text'] = "สวัสดีค่ะ คุณสามารถใช้คำสั่งด้านล่างเพื่อเริ่มต้นใช้งานได้เลยค่ะ\n
+        About\n
+        Contact\n";
         replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Sticker"
@@ -57,7 +59,11 @@
     else {
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "ลองอย่างอื่นนะ";
+        $arrayPostData['messages'][0]['text'] = "สวัสดีค่ะ คุณสามารถใช้คำสั่งด้านล่างเพื่อเริ่มต้นใช้งานได้เลยค่ะ\n
+        About\n
+        Contact\n
+        
+        ";
         replyMsg($arrayHeader,$arrayPostData);
     }
 function replyMsg($arrayHeader,$arrayPostData){
