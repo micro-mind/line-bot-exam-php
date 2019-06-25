@@ -18,7 +18,8 @@
         เกี่ยวกับ\n
         ติดต่อ\n
         แผนที่\n
-        สินค้า\n";
+        สินค้า\n
+        เว็บไซต์\n";
         replyMsg($arrayHeader,$arrayPostData);
     }
 
@@ -60,7 +61,7 @@
         Granulator\n
         Robotic Arm\n
         Pipe Testing\n
-        Aluminium-uPVC Profile Procession\n\nเราพร้อมให้คำปรึกษา เพื่อ Solutions ที่ดีที่สุด";
+        Aluminium-uPVC Profile Procession\n\nข้อมูลเพิ่มเติมของเครื่องจักรสามารถดูได้จากเว็บไซต์ http://www.packallplastic.co.th\nเราพร้อมให้คำปรึกษา เพื่อ Solutions ที่ดีที่สุด";
         replyMsg($arrayHeader,$arrayPostData);
     }
 
