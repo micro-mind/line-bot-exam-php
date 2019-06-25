@@ -40,18 +40,7 @@
         replyMsg($arrayHeader,$arrayPostData);
     }
 
-    #ตัวอย่าง Message Type "Location"
-    else if($message == "ที่อยู่" || "Address"){
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "location";
-        $arrayPostData['messages'][0]['title'] = "Pack All Plastic Co.,Ltd.";
-        $arrayPostData['messages'][0]['address'] =   "13.835126,100.581723";
-        $arrayPostData['messages'][0]['latitude'] = "13.835126";
-        $arrayPostData['messages'][0]['longitude'] = "100.581723";
-        replyMsg($arrayHeader,$arrayPostData);
-    }
-
-    else if($message == "สินค้า"){
+   else if($message == "สินค้า"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "
@@ -70,6 +59,19 @@
         Aluminium-uPVC Profile Procession";
         replyMsg($arrayHeader,$arrayPostData);
     }
+
+    #ตัวอย่าง Message Type "Location"
+    else if($message == "ที่อยู่"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "location";
+        $arrayPostData['messages'][0]['title'] = "Pack All Plastic Co.,Ltd.";
+        $arrayPostData['messages'][0]['address'] =   "13.835126,100.581723";
+        $arrayPostData['messages'][0]['latitude'] = "13.835126";
+        $arrayPostData['messages'][0]['longitude'] = "100.581723";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+
+ 
 
    /* else if($message == "สวัสดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
