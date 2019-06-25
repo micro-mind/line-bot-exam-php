@@ -20,7 +20,8 @@
         แผนที่\n
         สินค้า\n
         เว็บไซต์\n
-        พาร์ทเนอร์\n";
+        พาร์ทเนอร์\n
+        Catalog";
         replyMsg($arrayHeader,$arrayPostData);
     }
 
@@ -95,7 +96,14 @@
         $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
         replyMsg($arrayHeader,$arrayPostData);
     }
-    
+     else if($message == "Catalog"){
+        $image_url = "https://uppic.cc/d/K7b9";
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "image";
+        $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+        $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+        replyMsg($arrayHeader,$arrayPostData);
+    }
     else {
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
@@ -105,7 +113,8 @@
         แผนที่\n
         สินค้า\n
         เว็บไซต์\n
-        พาร์ทเนอร์\n";
+        พาร์ทเนอร์\n
+        Catalog";
         replyMsg($arrayHeader,$arrayPostData);
     }
 function replyMsg($arrayHeader,$arrayPostData){
