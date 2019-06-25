@@ -19,8 +19,6 @@
         ติดต่อ\n
         ที่อยู่\n
         สินค้า\n
-      
-        
         ";
         replyMsg($arrayHeader,$arrayPostData);
     }
@@ -40,10 +38,17 @@
         replyMsg($arrayHeader,$arrayPostData);
     }
 
+ else if($message == "เว็บไซต์"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "http://www.packallplastic.co.th/";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+
    else if($message == "สินค้า"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "Pack All Plastic ONE STOP SERVICE เป็นผู้นำเข้า จัดจำหน่าย พร้อมให้คำปรึกษาเกี่ยวกับเครื่องจักร รวมถึงซ่อมบำรุงเครื่องจักร\n
+        $arrayPostData['messages'][0]['text'] = "สินค้า และบริการ\nPack All Plastic ONE STOP SERVICE เป็นผู้นำเข้า จัดจำหน่าย พร้อมให้คำปรึกษาเกี่ยวกับเครื่องจักร รวมถึงซ่อมบำรุงเครื่องจักร\n
         Feed Mixing and Dosing\n
         Injection\n
         Extrusion\n
