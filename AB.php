@@ -43,7 +43,7 @@
    else if($message == "สินค้า"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "
+        $arrayPostData['messages'][0]['text'] = "Pack All Plastic ONE STOP SERVICE เป็นผู้นำเข้า จัดจำหน่าย พร้อมให้คำปรึกษาเกี่ยวกับเครื่องจักร รวมถึงซ่อมบำรุงเครื่องจักร\n
         Feed Mixing and Dosing\n
         Injection\n
         Extrusion\n
