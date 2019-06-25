@@ -36,8 +36,7 @@
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "126/57-58 ซอย พหลโยธิน 32 ถนนพหลโยธิน แขวงเสนานิคม เขต จตุจักร กรุงเทพฯ 10900 
-\nPhone number : 02-941-6584-7 , 02-941-6984-5 \nFax : 02-561-1716 \n
-Email : nattarin@packallplastic.co.th";
+\nPhone number : 02-941-6584-7 , 02-941-6984-5 \nFax : 02-561-1716 \nEmail : nattarin@packallplastic.co.th";
         replyMsg($arrayHeader,$arrayPostData);
     }
 
