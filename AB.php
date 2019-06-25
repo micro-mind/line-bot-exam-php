@@ -15,10 +15,68 @@
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "สวัสดีค่ะ คุณสามารถใช้คำสั่งด้านล่างเพื่อเริ่มต้นใช้งานได้เลยค่ะ\n
-        About\n
-        Contact\n";
+        เกี่ยวกับ\n
+        ติดต่อ\n
+        ที่อยู่\n
+        สินค้า\n
+      
+        
+        ";
         replyMsg($arrayHeader,$arrayPostData);
     }
+
+    else if($message == "เกี่ยวกับ"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "Pack All Plastic Co., Ltd.\n Founded in 1986 as an importer, distributor and exclusive agency for global leading machineries, Pack All Plastic Co., Ltd (PAP) is specialized in providing high performance machines, equipments, tools and related products including with reliable after sales service for full range of plastic, rubber, recycle and aluminum profile processing industry.";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+
+    else if($message == "ติดต่อ"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "126/57-58 ซอย พหลโยธิน 32 ถนนพหลโยธิน แขวงเสนานิคม เขต จตุจักร กรุงเทพฯ 10900 
+\nPhone number : 02-941-6584-7 , 02-941-6984-5 \nFax : 02-561-1716 \nEmail : nattarin@packallplastic.co.th";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+
+    #ตัวอย่าง Message Type "Location"
+    else if($message == "ที่อยู่" || "Address"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "location";
+        $arrayPostData['messages'][0]['title'] = "Pack All Plastic Co.,Ltd.";
+        $arrayPostData['messages'][0]['address'] =   "13.835126,100.581723";
+        $arrayPostData['messages'][0]['latitude'] = "13.835126";
+        $arrayPostData['messages'][0]['longitude'] = "100.581723";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+
+    else if($message == "สินค้า"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "
+        Feed Mixing and Dosing\n
+        Injection\n
+        Extrusion\n
+        Thermoforming\n
+        Agglomerator\n
+        Coating System\n
+        Winding Technology\n
+        Rotational Moulding\n
+        Pulverizer\n
+        Granulator\n
+        Robotic Arm\n
+        Pipe Testing\n
+        Aluminium-uPVC Profile Procession";
+        replyMsg($arrayHeader,$arrayPostData);
+    }
+
+   /* else if($message == "สวัสดี"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "";
+        replyMsg($arrayHeader,$arrayPostData);
+    }   */ 
     #ตัวอย่าง Message Type "Sticker"
     else if($message == "ฝันดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
@@ -36,16 +94,7 @@
         $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
         replyMsg($arrayHeader,$arrayPostData);
     }
-    #ตัวอย่าง Message Type "Location"
-    else if($message == "ที่อยู่" || "Address"){
-        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-        $arrayPostData['messages'][0]['type'] = "location";
-        $arrayPostData['messages'][0]['title'] = "Pack All Plastic Co.,Ltd.";
-        $arrayPostData['messages'][0]['address'] =   "13.835360,100.581717";
-        $arrayPostData['messages'][0]['latitude'] = "13.835360";
-        $arrayPostData['messages'][0]['longitude'] = "100.581717";
-        replyMsg($arrayHeader,$arrayPostData);
-    }
+    
     #ตัวอย่าง Message Type "Text + Sticker ใน 1 ครั้ง"
     else if($message == "ลาก่อน"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
